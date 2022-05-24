@@ -28,8 +28,11 @@ class View {
     let mark = this.game.currentPlayer;
     e.target.dataset.value = mark;
     e.target.textContent = mark;
-
     e.target.style.backgroundColor = 'white';
+    
+    if (this.game.winner()) {
+      alert(this.game.winner());
+    }
   }
 
   makeMove(square) {}
