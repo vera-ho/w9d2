@@ -8,23 +8,26 @@ class View {
 
   setupBoard() {
 
-    const board = document.createElement('ul');
+    this.board = document.createElement('ul');
 
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
         const li = document.createElement('li');
         li.dataset.pos = JSON.stringify([i, j]);
         li.dataset.value = 'X';
-        board.appendChild(li);
+        this.board.appendChild(li);
       }
     }
     console.log("board set up");
-    this.el[0].appendChild(board);
+    this.el[0].appendChild(this.board);
   }
   
   bindEvents() {}
 
-  handleClick(e) {}
+  handleClick(e) {
+
+    console.log(e.target.dataset.pos);
+  }
 
   makeMove(square) {}
 

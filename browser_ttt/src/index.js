@@ -8,4 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const gv = new View(game, el);
 
+
+  gv.board.addEventListener('click', e => gv.handleClick(e));
+
 });
