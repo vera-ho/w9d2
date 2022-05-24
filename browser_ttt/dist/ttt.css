@@ -10,6 +10,14 @@ li {
   height: 50px;
   border: blue 1px solid;
   background-color: gray;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: lime;
+  text-align: center;
+}
+
+li:focus {
+  background-color: white;
 }
 
 li:hover {
